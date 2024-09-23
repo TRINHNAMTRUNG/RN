@@ -13,7 +13,13 @@ const OptionColorPage = ({ navigation, route }) => {
             <ScrollView >
                 <View style={styleOptionColorPage.frameDetail}>
                     <Image source={selectCurentProd.srcImage} style={styleOptionColorPage.image} />
-                    <Text style={[styleOptionColorPage.text, { fontSize: 20 }]}>{selectCurentProd.name}</Text>
+                    <View style={{ flex: 1 }}>
+                        <Text style={[styleOptionColorPage.text, { fontSize: 17 }]}>{selectCurentProd.name}</Text>
+                        <Text style={[styleOptionColorPage.text, { fontSize: 17 }]}>Màu sắc: {selectCurentProd.color}</Text>
+                        <Text style={[styleOptionColorPage.text, { fontSize: 17 }]}>Cung cấp bởi: {selectCurentProd.supplier}</Text>
+                        <Text style={[styleOptionColorPage.text, { fontSize: 17, color: "red" }]}>Giá: {selectCurentProd.price} đ</Text>
+                    </View>
+
                 </View>
                 <View style={styleOptionColorPage.frameOption}>
                     <Text style={[styleOptionColorPage.text, { fontSize: 20, marginBottom: 15, flex: 0 }]}>Chọn một màu bên dưới: </Text>
@@ -48,10 +54,9 @@ const styleOptionColorPage = StyleSheet.create({
     text: {
         fontSize: 14,
         fontWeight: "500",
-        marginTop: 10,
         marginLeft: 20,
         flexWrap: "wrap",
-        flex: 1
+        marginTop: 10
     },
     container: {
         marginTop: 30,

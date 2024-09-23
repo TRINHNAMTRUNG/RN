@@ -10,6 +10,7 @@ export const listImageProd = [
         color: "#c5f1fb",
         price: 1790000,
         originalPrice: 1790000,
+        supplier: "Tiki trading"
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ export const listImageProd = [
         color: "red",
         price: 1790000,
         originalPrice: 1790000,
+        supplier: "Tiki trading"
     },
     {
         id: 3,
@@ -26,6 +28,7 @@ export const listImageProd = [
         color: "black",
         price: 1790000,
         originalPrice: 1790000,
+        supplier: "Tiki trading"
     },
     {
         id: 4,
@@ -34,5 +37,6 @@ export const listImageProd = [
         color: "blue",
         price: 1790000,
         originalPrice: 1790000,
+        supplier: "Tiki trading"
     },
 ];
