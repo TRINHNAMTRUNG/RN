@@ -97,11 +97,20 @@ const styleDetailProdPage = StyleSheet.create({
         alignItems: "center",
     },
     btnSubmit: {
+        width: "95%",
+        marginLeft: "2.5%",
         backgroundColor: "red",
         borderRadius: 10,
         padding: 10,
         alignItems: "center",
-        marginTop: 60
+        marginTop: 60,
+        // Shadow for iOS
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        // Shadow for Android
+        elevation: 5, // Dùng cho Android
     },
     image: {
         height: "90%",

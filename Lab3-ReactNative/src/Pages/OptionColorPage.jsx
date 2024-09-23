@@ -16,7 +16,7 @@ const OptionColorPage = ({ navigation, route }) => {
                     <Text style={[styleOptionColorPage.text, { fontSize: 20 }]}>{selectCurentProd.name}</Text>
                 </View>
                 <View style={styleOptionColorPage.frameOption}>
-                    <Text style={[styleOptionColorPage.text, { fontSize: 20, marginBottom: 15 }]}>Chọn một màu bên dưới: </Text>
+                    <Text style={[styleOptionColorPage.text, { fontSize: 20, marginBottom: 15, flex: 0 }]}>Chọn một màu bên dưới: </Text>
                     <View style={styleOptionColorPage.wrapColor}>
                         {listImageProd && listImageProd.length !== 0 &&
                             listImageProd.map((item) => {
@@ -59,7 +59,8 @@ const styleOptionColorPage = StyleSheet.create({
         backgroundColor: "white"
     },
     frameOption: {
-        backgroundColor: "white"
+        backgroundColor: "white",
+        height: height * 0.7,
     },
     frameDetail: {
         height: height * 0.3,
@@ -71,14 +72,25 @@ const styleOptionColorPage = StyleSheet.create({
         width: 169
     },
     wrapColor: {
-        alignItems: "center"
+        alignItems: "center",
+        marginTop: 20
     },
     btnSubmit: {
+        width: "95%",
+        marginLeft: "2.5%",
         backgroundColor: "#4D6DC1",
         borderRadius: 10,
         padding: 10,
         alignItems: "center",
-        marginTop: 60
+        marginTop: 80,
+        borderColor: "#F7B086",
+        // Shadow for iOS
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        // Shadow for Android
+        elevation: 5, // Dùng cho Android
     },
     btnColor: {
         borderRadius: 10,
@@ -86,7 +98,13 @@ const styleOptionColorPage = StyleSheet.create({
         height: 50,
         width: 50,
         borderColor: "#F7B086",
-
+        // Shadow for iOS
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        // Shadow for Android
+        elevation: 10, // Dùng cho Android
     }
 })
 
